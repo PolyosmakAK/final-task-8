@@ -4,10 +4,10 @@ import lombok.Getter;
 
 @Getter
 public class RollbackReservationException extends RuntimeException {
-    private final Float lastReservation;
-    private final Float currentLimit;
+    private final Double lastReservation;
+    private final Double currentLimit;
 
-    public RollbackReservationException(Float lastReservation, Float currentLimit) {
+    public RollbackReservationException(Double lastReservation, Double currentLimit) {
         this.lastReservation = lastReservation;
         this.currentLimit = currentLimit;
     }

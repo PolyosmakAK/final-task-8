@@ -1,7 +1,6 @@
 package pro.controller;
 
 import lombok.AllArgsConstructor;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import pro.dto.LimitDto;
 import pro.response.LimitResponse;
@@ -15,7 +14,7 @@ public class LimitsController {
     private final LimitService limitService;
 
     @PostMapping(path = "/reservation")
-    public ResponseEntity<LimitResponse> reservationLimit(@RequestBody LimitDto limitDto) {
+    public LimitResponse reservationLimit(@RequestBody LimitDto limitDto) {
         return limitService.reservationLimitByUsers(limitDto);
     }
 

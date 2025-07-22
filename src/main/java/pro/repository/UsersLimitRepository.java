@@ -16,7 +16,7 @@ public interface UsersLimitRepository extends JpaRepository<UsersLimitEntity, Lo
     @Modifying
     @Transactional
     @Query("UPDATE UsersLimitEntity u SET u.dayLimit = :limit, u.currentLimit = :limit")
-    void updateAllLimits(@Param("limit") String limit);
+    void updateAllLimits(@Param("limit") Double limit);
 
     Optional<UsersLimitEntity> getUsersLimitEntitiesById(Long id);
 }

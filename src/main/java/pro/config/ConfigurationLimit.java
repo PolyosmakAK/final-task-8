@@ -7,12 +7,12 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 @ConfigurationProperties(prefix = "value.limit")
 public class ConfigurationLimit {
 
-    private String dayLimit;
+    private Double dayLimit;
 
     public ConfigurationLimit() {
     }
 
-    public void setDayLimit(String dayLimit) {
+    public void setDayLimit(Double dayLimit) {
         this.dayLimit = dayLimit;
     }
 }

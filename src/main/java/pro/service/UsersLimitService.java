@@ -16,7 +16,7 @@ public class UsersLimitService {
      *
      * @param limit значение лимита
      */
-    public void updateLimits(String limit) {
+    public void updateLimits(Double limit) {
         usersLimitRepository.updateAllLimits(limit);
     }
 
@@ -28,7 +28,7 @@ public class UsersLimitService {
      */
     public UsersLimitEntity getLimitById(Long id) {
         return usersLimitRepository.getUsersLimitEntitiesById(id).orElseGet(() -> {
-            UsersLimitEntity usersLimit = new UsersLimitEntity(id, 10000.00F, 10000.00F, null);
+            UsersLimitEntity usersLimit = new UsersLimitEntity(id, 10000.00, 10000.00, null);
             usersLimitRepository.save(usersLimit);
             return usersLimit;
         });

@@ -16,10 +16,10 @@ public class UsersLimitEntity {
     @Id
     @GeneratedValue()
     private Long id;
-    @Column(name = "day_limit")
-    private Float dayLimit;
+    @Column(name = "day_limit", nullable = false)
+    private Double dayLimit;
     @Column(name = "current_limit")
-    private Float currentLimit;
+    private Double currentLimit;
     @Column(name = "last_reservation")
-    private Float lastReservation;
+    private Double lastReservation;
 }
